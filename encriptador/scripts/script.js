@@ -1,10 +1,16 @@
 const textArea = document.querySelector(".text-area");
 const mensagem = document.querySelector(".mensagem");
+const imgResult = document.querySelector(".imgResult");
+const titleResult = document.querySelector(".titleResult");
+const textResult = document.querySelector(".textResult");
 
 function btnEncriptar(){
   const textoEncriptado = encriptar(textArea.value);
   mensagem.value = textoEncriptado;
   textArea.value = "";
+  imgResult.remove();
+  titleResult.remove();
+  textResult.remove();
 }
 
 function btnDesencriptar(){
