@@ -6,31 +6,40 @@
   
   <title>Encriptador</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/reset.css">
 </head>
 <body>
   <main>
     <header>
-    <img class="logoAlura" src="images/alura-logo.png" alt="Logo da Alura">
+      <img class="logoAlura" src="images/alura-logo.png" alt="Logo da Alura">
     </header>
     
     <section>
       <textarea class="text-area" cols="41" rows="4" placeholder="Digite o seu texto"></textarea>
+      
       <div class="informacao">
         <h6>Apenas letras minúsculas e sem acento.</h6>
       </div>
+      
       <div class="botoes">
         <button class="btn-encriptar">Encriptar</button>
         <button class="btn-desencriptar">Desencriptar</button>
       </div>
     </section>
 
-    <section>
-      <textarea class="mensagem" cols="20" rows="10"></textarea>
+    <section class="result">
+      <textarea class="mensagem" placeholder="" cols="20" rows="10" disabled></textarea>
+      <h6>Nenhuma mensagem encontrada</h6>
+      <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
       <button class="btn-copiar">Copiar</button>
     </section>
   </main>
-  
+
   <script src="scripts/script.js"></script>
 </body>
 </html>
