@@ -33,15 +33,33 @@
     </section>
 
     <section class="result">
-      <textarea class="mensagem" placeholder="" cols="20" rows="10" disabled></textarea>
+      <textarea class="mensagem" id="mensagem" placeholder="" cols="20" rows="10" readonly></textarea>
       <img class="imgResult" src="images/pesquisador.png" alt="Imagem do pesquisador">
       <h6 class="titleResult">Nenhuma mensagem encontrada</h6>
       <p class="textResult">Digite um texto que você deseja criptografar ou descriptografar.</p>
-      <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>
+      <button class="btn-copiar" data-clipboard-target="#mensagem">Copiar</button>
     </section>
   </main>
 
   <script src="scripts/script.js"></script>
   <script src="https://kit.fontawesome.com/5871f9f580.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+
+  <script>
+    var clipboard = new ClipboardJS('.btn-copiar');
+
+      clipboard.on('success', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+      });
+
+      clipboard.on('error', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+      });
+  </script>
+  
 </body>
 </html>
