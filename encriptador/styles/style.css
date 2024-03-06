@@ -121,8 +121,8 @@ main{
   color: #0a3871;
   cursor: pointer;
   height: 67px;
-  margin: 550px 0 0 280px;
+  margin: 550px 0 0 200px;
   position: absolute;
   width: 336px;
-  
+  visibility: hidden;
 }

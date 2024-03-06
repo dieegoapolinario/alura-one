@@ -3,6 +3,7 @@ const mensagem = document.querySelector(".mensagem");
 const imgResult = document.querySelector(".imgResult");
 const titleResult = document.querySelector(".titleResult");
 const textResult = document.querySelector(".textResult");
+const btnCopiar = document.querySelector(".btn-copiar");
 
 function btnEncriptar(){
   const textoEncriptado = encriptar(textArea.value);
@@ -11,6 +12,7 @@ function btnEncriptar(){
   imgResult.remove();
   titleResult.remove();
   textResult.remove();
+  btnCopiar.style.visibility = "visible"; 
 }
 
 function btnDesencriptar(){
