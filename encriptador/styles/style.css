@@ -1,13 +1,12 @@
 main{
   display: flex;
-  margin-bottom: 50px;
-  margin-left: 80px;
+  width: 100%;
 }
 
 .logoAlura{
   width: 120px;
   height: 48px;
-  margin: 40px 0 0 -40px;
+  margin: 40px 0 0 40px;
 }
 
 .text-area{
@@ -125,4 +124,81 @@ main{
   position: absolute;
   width: 336px;
   visibility: hidden;
+}
+
+@media(max-width: 1024px){
+  main{
+    flex-direction: column;
+  }
+  .logoAlura{
+    margin: 100px 0 0 10px;
+  }
+  .text-area{
+    margin: 150px 0 0 60px;
+    font-size: 32px;
+  }
+  .informacao i{
+    margin: 300px 0 0 60px;
+  }
+  .botoes{
+    margin: 20px 0 0 60px;
+  }
+  .result .mensagem{
+    width: 90%;
+    height: 200px;
+    margin: 40px 0 0 -10px;
+  }
+  .result img{
+    display: none;
+  }
+  .result h6{
+    width: 520px;
+    margin: 60px 0 0 -650px;
+    font-size: 32px;
+  }
+  .result p{
+    width: 750px;
+    margin: 120px 0 0 -650px;
+    font-size: 24px;
+  }
+  .btn-copiar{
+    visibility: hidden;
+    margin: 150px 0 0 -10px;
+    width: 85%;
+  }
+}
+
+@media(max-width: 412px){
+  .logoAlura{
+    margin: 30px 0 0 -30px;
+  }
+  .text-area{
+    margin: 60px 0 -100px 20px;
+  }
+  .informacao i{
+    margin: 10px 0 0 20px;
+  }
+  .botoes{
+    flex-direction: column;
+    margin: 20px;
+  }
+  .btn-desencriptar{
+    margin: 20px 0 0 1px;
+  }
+  .result .mensagem{
+    margin: 10px 0 0 -10px;
+  }
+  .result h6{
+    width: 70%;
+    margin: 30px 0 0 -330px;
+    font-size: 24px;
+  }
+  .result p {
+    width: 70%;
+    margin: 110px 0 0 -290px;
+    font-size: 16px;
+  }
+  .btn-copiar{
+    margin: 130px;
+  }
 }
